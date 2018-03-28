@@ -1,0 +1,26 @@
+import React from 'react';
+import { View, Text, Image } from 'react-native';
+
+import { BaseScreen } from './baseScreen';
+import * as images from '../images';
+
+export class PushScreen extends React.Component {
+    render() {
+        return (
+            <BaseScreen options={
+                {
+                    topContainer: {
+                        height: 200,
+                        backgroundColor: "#E2553D",
+                        imageSource: images.push
+                    },
+                    bottomContainer: {
+                        backgroundColor: "#F56D4F",
+                        description: "Engage your users by sending them targeted messages to specific sets of users at exactly the right time.Create segments of users based on device and custom properties."
+                    }
+                }
+            }>
+            </BaseScreen>
+        );
+    }
+}

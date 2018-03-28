@@ -1,58 +1,53 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
+  StyleSheet
 } from 'react-native';
+import { TabNavigator } from 'react-navigation';
+import { WelcomeScreen } from './screens/welcomeScreen';
+import { BuildScreen } from './screens/buildScreen';
+import { TestScreen } from './screens/testScreen';
+import { DistributeScreen } from './screens/distributeScreen';
+import { CrashesScreen } from './screens/crashesScreen';
+import { AnalyticsScreen } from './screens/analyticsScreen';
+import { PushScreen } from './screens/pushScreen';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+const RootTabNavigator = TabNavigator(
+  {
+    Welcome: {
+      screen: WelcomeScreen,
+    },
+    Build: {
+      screen: BuildScreen,
+    },
+    Test: {
+      screen: TestScreen,
+    },
+    Distribute: {
+      screen: DistributeScreen,
+    },
+    Crashes: {
+      screen: CrashesScreen,
+    },
+    Analytics: {
+      screen: AnalyticsScreen,
+    },
+    Push: {
+      screen: PushScreen,
+    },
+  },
+  {
+    initialRouteName: 'Welcome',
+    tabBarOptions: {
+      style: {
+        backgroundColor: "#252525"
+      },
+    },
+    lazy: false
+  }
+);
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
-    );
+    return <RootTabNavigator />;
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
