@@ -36,7 +36,7 @@ const RootTabNavigator = TabNavigator(
     },
   },
   {
-    initialRouteName: 'Crashes',
+    initialRouteName: 'Welcome',
     tabBarOptions: {
       style: {
         backgroundColor: "#252525"
