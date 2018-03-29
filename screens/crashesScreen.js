@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, Alert } from 'react-native';
 
 import { BaseScreen } from './baseScreen';
 import * as images from '../images';
+import Crashes from 'appcenter-crashes';
 
 export class CrashesScreen extends React.Component {
+
     render() {
         return (
             <BaseScreen options={
@@ -20,7 +22,15 @@ export class CrashesScreen extends React.Component {
                         bottomButton: {
                             text: "Send crash report",
                             onPress: () => {
-                                console.log('pressed');
+                                Alert.alert(
+                                    null,
+                                    'A crash report will be sent when you reopen the app.',
+                                    [
+                                        { text: 'Cancel' },
+                                        { text: 'Crash App', onPress: () => Crashes.generateTestCrash() },
+                                    ],
+                                    { cancelable: false }
+                                )
                             }
                         }
                     }
