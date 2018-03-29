@@ -36,13 +36,17 @@ const RootTabNavigator = TabNavigator(
     },
   },
   {
-    initialRouteName: 'Welcome',
+    initialRouteName: 'Crashes',
     tabBarOptions: {
       style: {
         backgroundColor: "#252525"
-      },
+      },      
     },
-    lazy: false
+    navigationOptions:{
+      tabBarVisible: false
+    },
+    lazy: false,
+    
   }
 );
 

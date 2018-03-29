@@ -16,7 +16,13 @@ export class AnalyticsScreen extends React.Component {
                     },
                     bottomContainer: {
                         backgroundColor: "#FFC326",
-                        description: "Get information about the number of daily, weekly, and monthly users, session duration, the top devices and more. Use events to collect rich behavioral analytics data."
+                        description: "Get information about the number of daily, weekly, and monthly users, session duration, the top devices and more. Use events to collect rich behavioral analytics data.",
+                        topButton: {
+                            text: "Send a sample event"
+                        },
+                        bottomButton: {
+                            text: "Send event with color property"
+                        }
                     }
                 }
             }>

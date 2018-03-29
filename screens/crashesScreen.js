@@ -16,7 +16,13 @@ export class CrashesScreen extends React.Component {
                     },
                     bottomContainer: {
                         backgroundColor: "#91CA47",
-                        description: "Collect crashes from all devices, prioritize them based on the number of users seeing the crash, and get the full stack traces to help you fix them.\n\nBacked by HockeyApp."
+                        description: "Collect crashes from all devices, prioritize them based on the number of users seeing the crash, and get the full stack traces to help you fix them.\n\nBacked by HockeyApp.",
+                        bottomButton: {
+                            text: "Send crash report",
+                            onPress: () => {
+                                console.log('pressed');
+                            }
+                        }
                     }
                 }
             }>
