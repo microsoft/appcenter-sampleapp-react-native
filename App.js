@@ -47,10 +47,11 @@ const RootTabNavigator = TabNavigator(
       },      
     },
     navigationOptions:{
-      tabBarVisible: false
+      tabBarVisible: false,
+      swipeEnabled: true,
+      animationEnabled: true 
     },
-    lazy: false,
-    
+    lazy: false,  
   }
 );
 
