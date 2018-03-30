@@ -10,6 +10,7 @@ import { DistributeScreen } from './screens/distributeScreen';
 import { CrashesScreen } from './screens/crashesScreen';
 import { AnalyticsScreen } from './screens/analyticsScreen';
 import { PushScreen } from './screens/pushScreen';
+import { CodePushScreen } from './screens/codePushScreen';
 
 const RootTabNavigator = TabNavigator(
   {
@@ -34,6 +35,9 @@ const RootTabNavigator = TabNavigator(
     Push: {
       screen: PushScreen,
     },
+    CodePush: {
+      screen: CodePushScreen
+    }
   },
   {
     initialRouteName: 'Welcome',

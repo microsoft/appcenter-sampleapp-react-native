@@ -5,5 +5,6 @@ module.exports = {
     crashes: require('./res/crashes.png'),
     distribute: require('./res/distribute.png'),
     push: require('./res/push.png'),
-    test: require('./res/test.png')
+    test: require('./res/test.png'),
+    codepush: require('./res/codepush.png'),
 }

@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
+import { CodePushComponent } from './codePushComponent';
 
 export class BaseScreen extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {};
+    }
 
     render() {
         const createButtonView = (buttonProps, marginBottom) => {
@@ -26,6 +32,11 @@ export class BaseScreen extends React.Component {
 
         const bottomButtonView = createButtonView(this.props.options.bottomContainer.bottomButton);
         const topButtonView = createButtonView(this.props.options.bottomContainer.topButton);
+        let codePushComponent;
+        const self = this;
+        if (this.props.options.codepush) {
+            codePushComponent = <CodePushComponent ref={codepush => { self.codepush = codepush }} />;
+        }
 
         return (
             <View style={{ flex: 1 }}>
@@ -44,6 +55,7 @@ export class BaseScreen extends React.Component {
                     <Text style={styles.description}>{this.props.options.bottomContainer.description}</Text>
                     <View style={{ flex: 2 }}>
                         <View style={{ flex: 1 }} />
+                        {codePushComponent}
                         {topButtonView}
                         {bottomButtonView}
                         <View style={{ height: 40 }} />
@@ -67,6 +79,19 @@ const styles = StyleSheet.create({
         height: 55,
         width: 300,
         alignSelf: "center"
+    },
+    infoView: {
+        height: 100,
+        alignSelf: "center",
+        borderWidth: 2
+    },
+    infoViewMessageText: {
+        color: "white",
+        fontSize: 17,
+    },
+    infoViewStatusText: {
+        color: "white",
+        fontSize: 14,
     },
     button: {
         alignItems: 'center',
