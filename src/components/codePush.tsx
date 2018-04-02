@@ -1,45 +1,53 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
-import CodePush from 'react-native-code-push';
+import CodePushLib from 'react-native-code-push';
 
-export class CodePushComponent extends React.Component {
-    constructor() {
-        super();
+type State = {
+    syncMessage?: string,
+    progress?: {
+        receivedBytes: number,
+        totalBytes: number
+    }
+}
+
+export default class CodePush extends React.Component<{}, State> {
+    constructor(props: {}, state: State) {
+        super(props, state);
         this.state = {};
     }
 
     codePushStatusDidChange(syncStatus) {
         switch (syncStatus) {
-            case CodePush.SyncStatus.CHECKING_FOR_UPDATE:
+            case CodePushLib.SyncStatus.CHECKING_FOR_UPDATE:
                 this.setState({ syncMessage: "Checking for update." });
                 break;
-            case CodePush.SyncStatus.DOWNLOADING_PACKAGE:
+            case CodePushLib.SyncStatus.DOWNLOADING_PACKAGE:
                 this.setState({ syncMessage: "Downloading package." });
                 break;
-            case CodePush.SyncStatus.AWAITING_USER_ACTION:
+            case CodePushLib.SyncStatus.AWAITING_USER_ACTION:
                 this.setState({ syncMessage: "Awaiting user action." });
                 break;
-            case CodePush.SyncStatus.INSTALLING_UPDATE:
+            case CodePushLib.SyncStatus.INSTALLING_UPDATE:
                 this.setState({ syncMessage: "Installing update." });
                 break;
-            case CodePush.SyncStatus.UP_TO_DATE:
-                this.setState({ syncMessage: "App up to date.", progress: false });
+            case CodePushLib.SyncStatus.UP_TO_DATE:
+                this.setState({ syncMessage: "App up to date.", progress: null });
                 break;
-            case CodePush.SyncStatus.UPDATE_IGNORED:
-                this.setState({ syncMessage: "Update cancelled by user.", progress: false });
+            case CodePushLib.SyncStatus.UPDATE_IGNORED:
+                this.setState({ syncMessage: "Update cancelled by user.", progress: null });
                 break;
-            case CodePush.SyncStatus.UPDATE_INSTALLED:
-                this.setState({ syncMessage: "Update installed and will be applied on restart.", progress: false });
+            case CodePushLib.SyncStatus.UPDATE_INSTALLED:
+                this.setState({ syncMessage: "Update installed and will be applied on restart.", progress: null });
                 break;
-            case CodePush.SyncStatus.UNKNOWN_ERROR:
-                this.setState({ syncMessage: "An unknown error occurred.", progress: false });
+            case CodePushLib.SyncStatus.UNKNOWN_ERROR:
+                this.setState({ syncMessage: "An unknown error occurred.", progress: null });
                 break;
         }
     }
 
     sync = () => {
-        CodePush.sync(
-            { updateDialog: true },
+        CodePushLib.sync(
+            { updateDialog: CodePushLib.DEFAULT_UPDATE_DIALOG },
             this.codePushStatusDidChange.bind(this),
             this.codePushDownloadDidProgress.bind(this)
         );

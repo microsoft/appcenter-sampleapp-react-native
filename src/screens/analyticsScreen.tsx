@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { View, Text, Image, Alert, NativeModules } from 'react-native';
 
-import { BaseScreen } from './baseScreen';
-import * as images from '../images';
+import BaseScreen from '../components/baseScreen';
+import images from '../images';
 import Analytics from 'appcenter-analytics';
 
 export class AnalyticsScreen extends React.Component {

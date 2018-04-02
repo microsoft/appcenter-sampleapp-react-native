@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
-import {
-  StyleSheet
-} from 'react-native';
+import * as React from 'react';
+import { StyleSheet } from 'react-native';
 import { TabNavigator } from 'react-navigation';
 import { WelcomeScreen } from './screens/welcomeScreen';
 import { BuildScreen } from './screens/buildScreen';
@@ -44,18 +42,18 @@ const RootTabNavigator = TabNavigator(
     tabBarOptions: {
       style: {
         backgroundColor: "#252525"
-      },      
+      },
     },
-    navigationOptions:{
+    navigationOptions: {
       tabBarVisible: false,
       swipeEnabled: true,
-      animationEnabled: true 
+      animationEnabled: true
     },
-    lazy: false,  
+    lazy: false,
   }
 );
 
-export default class App extends Component {
+export default class App extends React.Component {
   render() {
     return <RootTabNavigator />;
   }

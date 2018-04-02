@@ -1,7 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
-import { BaseScreen } from './baseScreen';
-import * as images from '../images';
+import BaseScreen from '../components/baseScreen';
+import images from '../images';
 
 export class WelcomeScreen extends React.Component {
     render() {
@@ -24,7 +24,3 @@ export class WelcomeScreen extends React.Component {
         );
     }
 }
-
-const styles = StyleSheet.create({
-
-});

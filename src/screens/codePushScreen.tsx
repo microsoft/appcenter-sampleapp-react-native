@@ -1,15 +1,12 @@
-import React from 'react';
+import * as React from 'react';
 import { View, Text, Image, Alert, NativeModules } from 'react-native';
 
-import { BaseScreen } from './baseScreen';
-import * as images from '../images';
+import BaseScreen from '../components/baseScreen';
+import images from '../images';
 
 export class CodePushScreen extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {};
-    }
+    baseScreen: BaseScreen
 
     render() {
         let self = this;
@@ -29,19 +26,15 @@ export class CodePushScreen extends React.Component {
                             bottomButton: {
                                 text: "Sync",
                                 onPress: () => {
-                                    self.basescreen.codepush.sync();
+                                    self.baseScreen.codepush.sync();
                                 }
                             }
                         },
                         codepush: true
                     }
-                } ref={basescreen => { this.basescreen = basescreen }}>
+                } ref={baseScreen => { this.baseScreen = baseScreen }}>
                 </BaseScreen>
             </View>
         );
     }
-}
-
-const styles = {
-
 }

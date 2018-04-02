@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { View, Text, Image, Alert } from 'react-native';
 
-import { BaseScreen } from './baseScreen';
-import * as images from '../images';
+import BaseScreen from '../components/baseScreen';
+import images from '../images';
 import Crashes from 'appcenter-crashes';
 
 export class CrashesScreen extends React.Component {

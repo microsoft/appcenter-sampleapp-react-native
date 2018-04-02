@@ -1,16 +1,41 @@
-import React, { Component } from 'react';
-import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
-import { CodePushComponent } from './codePushComponent';
+import * as React from 'react';
+import { StyleSheet, View, Text, Image, TouchableOpacity, ImageRequireSource } from 'react-native';
+import CodePush from '../components/codePush';
 
-export class BaseScreen extends React.Component {
+export type Props = {
+    options: {
+        title: string,
+        topContainer: {
+            height: number,
+            backgroundColor: string,
+            imageSource: ImageRequireSource,
+        },
+        bottomContainer: {
+            backgroundColor: string,
+            description: string,
+            topButton?: {
+                text: string,
+                onPress: () => void
+            }
+            bottomButton?: {
+                text: string,
+                onPress: () => void
+            }
+        },
+        codepush?: boolean
+    }
+}
 
-    constructor() {
-        super();
+export default class BaseScreen extends React.Component<Props> {
+    codepush: CodePush
+
+    constructor(props: Props) {
+        super(props);
         this.state = {};
     }
 
     render() {
-        const createButtonView = (buttonProps, marginBottom) => {
+        const createButtonView = (buttonProps) => {
             if (buttonProps) {
                 const onPress = () => {
                     if (buttonProps.onPress) {
@@ -35,7 +60,7 @@ export class BaseScreen extends React.Component {
         let codePushComponent;
         const self = this;
         if (this.props.options.codepush) {
-            codePushComponent = <CodePushComponent ref={codepush => { self.codepush = codepush }} />;
+            codePushComponent = <CodePush ref={codepush => { self.codepush = codepush }} />;
         }
 
         return (

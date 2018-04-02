@@ -7,6 +7,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@types/react": "^16.1.0",
+    "@types/react-native": "^0.52.22",
     "appcenter": "^1.4.0",
     "appcenter-analytics": "^1.4.0",
     "appcenter-crashes": "^1.4.0",
@@ -16,12 +18,31 @@
     "react-navigation": "^1.5.8"
   },
   "devDependencies": {
+    "@types/jest": "^22.2.2",
+    "@types/react-test-renderer": "^16.0.1",
     "babel-jest": "22.4.3",
     "babel-preset-react-native": "4.0.0",
     "jest": "22.4.3",
-    "react-test-renderer": "^16.3.0-alpha.1"
+    "react-native-typescript-transformer": "^1.2.3",
+    "react-test-renderer": "^16.3.0-alpha.1",
+    "ts-jest": "^22.4.2",
+    "typescript": "^2.8.1"
   },
   "jest": {
-    "preset": "react-native"
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "transformIgnorePatterns": [
+     "node_modules/(?!(react-native-code-push)"
+   ]
   }
 }

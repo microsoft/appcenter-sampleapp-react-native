@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { View, Text, Image } from 'react-native';
 
-import { BaseScreen } from './baseScreen';
-import * as images from '../images';
+import BaseScreen from '../components/baseScreen';
+import images from '../images';
 
 export class DistributeScreen extends React.Component {
     render() {
