@@ -9,6 +9,7 @@ export class TestScreen extends React.Component {
         return (
             <BaseScreen options={
                 {
+                    title: "Test",
                     topContainer: {
                         height: 200,
                         backgroundColor: "#3192B3",

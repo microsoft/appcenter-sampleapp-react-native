@@ -11,6 +11,7 @@ export class AnalyticsScreen extends React.Component {
             <View style={{ flex: 1 }}>
                 <BaseScreen options={
                     {
+                        title: "Analytics",
                         topContainer: {
                             height: 200,
                             backgroundColor: "#FDAD00",

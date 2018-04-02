@@ -11,6 +11,7 @@ export class CrashesScreen extends React.Component {
         return (
             <BaseScreen options={
                 {
+                    title: "Crashes",
                     topContainer: {
                         height: 200,
                         backgroundColor: "#6FA22E",

@@ -9,6 +9,7 @@ export class PushScreen extends React.Component {
         return (
             <BaseScreen options={
                 {
+                    title: "Push",
                     topContainer: {
                         height: 200,
                         backgroundColor: "#E2553D",

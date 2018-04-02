@@ -17,6 +17,7 @@ export class CodePushScreen extends React.Component {
             <View style={{ flex: 1 }}>
                 <BaseScreen options={
                     {
+                        title: "CodePush",
                         topContainer: {
                             height: 200,
                             backgroundColor: "#00695c",

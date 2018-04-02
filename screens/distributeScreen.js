@@ -9,6 +9,7 @@ export class DistributeScreen extends React.Component {
         return (
             <BaseScreen options={
                 {
+                    title: "Distribute",
                     topContainer: {
                         height: 200,
                         backgroundColor: "#38A495",

@@ -8,6 +8,7 @@ export class WelcomeScreen extends React.Component {
         return (
             <BaseScreen options={
                 {
+                    title: "Welcome",
                     topContainer: {
                         height: 150,
                         backgroundColor: "#CB2E62",

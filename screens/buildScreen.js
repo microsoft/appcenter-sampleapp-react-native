@@ -9,6 +9,7 @@ export class BuildScreen extends React.Component {
         return (
             <BaseScreen options={
                 {
+                    title: "Build",
                     topContainer: {
                         height: 200,
                         backgroundColor: "#0064C3",

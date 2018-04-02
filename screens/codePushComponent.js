@@ -71,8 +71,7 @@ export class CodePushComponent extends React.Component {
 const styles = StyleSheet.create({
     infoView: {
         height: 60,
-        alignSelf: "center",
-        //borderWidth: 2
+        alignSelf: "center"
     },
     message: {
         color: "white",
