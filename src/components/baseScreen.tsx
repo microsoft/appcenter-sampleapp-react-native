@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity, ImageRequireSource } from 'react-native';
 import CodePush from '../components/codePush';
+import { ifIphoneX } from 'react-native-iphone-x-helper'
 
 export type Props = {
     options: {
@@ -64,7 +65,7 @@ export default class BaseScreen extends React.Component<Props> {
         }
 
         return (
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1, ...ifIphoneX({paddingTop: 30}, {paddingTop: 0}) }}>
                 <View style={styles.headerContainer}>
                     <View style={{ flex: 1 }} />
                     <View style={styles.headerTextContainer}>
