@@ -7,21 +7,23 @@ import images from '../images';
 export class BuildScreen extends React.Component {
     render() {
         return (
-            <BaseScreen options={
-                {
-                    title: "Build",
-                    topContainer: {
-                        height: 200,
-                        backgroundColor: "#0064C3",
-                        imageSource: images.build
-                    },
-                    bottomContainer: {
-                        backgroundColor: "#0078D7",
-                        description: "Create an installable app package automatically with every push to your repository. Supports GitHub, or Git repos on Bitbucket and Visual Studio Team Services (VSTS).\n\nNo additional build hardware required."
+            <View style={{ flex: 1 }} testID="buildScreen">
+                <BaseScreen options={
+                    {
+                        title: "Build",
+                        topContainer: {
+                            height: 200,
+                            backgroundColor: "#0064C3",
+                            imageSource: images.build
+                        },
+                        bottomContainer: {
+                            backgroundColor: "#0078D7",
+                            description: "Create an installable app package automatically with every push to your repository. Supports GitHub, or Git repos on Bitbucket and Visual Studio Team Services (VSTS).\n\nNo additional build hardware required."
+                        }
                     }
-                }
-            }>
-            </BaseScreen>
+                }>
+                </BaseScreen>
+            </View>
         );
     }
 }

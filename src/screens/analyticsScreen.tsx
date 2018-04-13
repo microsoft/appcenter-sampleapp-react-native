@@ -8,7 +8,7 @@ import Analytics from 'appcenter-analytics';
 export class AnalyticsScreen extends React.Component {
     render() {
         return (
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1 }} testID="analyticsScreen">
                 <BaseScreen options={
                     {
                         title: "Analytics",

@@ -57,12 +57,22 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
                BuildableName = "AppCenterSampleTests.xctest"
                BlueprintName = "AppCenterSampleTests"
+               ReferencedContainer = "container:AppCenterSample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F81B57FB2080D79B0066D3CA"
+               BuildableName = "AppCenterSampleUITests.xctest"
+               BlueprintName = "AppCenterSampleUITests"
                ReferencedContainer = "container:AppCenterSample.xcodeproj">
             </BuildableReference>
          </TestableReference>

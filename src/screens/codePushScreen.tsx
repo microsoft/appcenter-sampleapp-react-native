@@ -11,7 +11,7 @@ export class CodePushScreen extends React.Component {
     render() {
         let self = this;
         return (
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1 }}  testID="codePushScreen">
                 <BaseScreen options={
                     {
                         title: "CodePush",
