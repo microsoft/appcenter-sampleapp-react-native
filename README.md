@@ -7,6 +7,19 @@ The App Center SDK modules and React Native Code Push are already integrated wit
 ## Tutorials
 First navigate to the **Getting Started** tutorial linked below. After following that tutorial, you can choose which App Center service to explore. 
 
+## How to run the app
+Make sure you are running NodeJS 7.4+ (https://nodejs.org/) and have [CocoaPods](https://cocoapods.org) installed
+
+```
+npm install
+npm install react-native-cli -g
+cd ios && pod update && cd ..
+```
+Make sure you have the testing device plugged in or an emulator running and run `npm run ios` or `npm run android` depending on the platform you want to use. 
+
+> Note: 
+The first time the application build may take very long, the subsequent builds are going to be faster.
+
 ## Contents
 | Tutorial | Description | Screenshot
 |:-|:-|-|
