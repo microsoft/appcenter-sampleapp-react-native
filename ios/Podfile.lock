@@ -12,13 +12,13 @@ DEPENDENCIES:
   - AppCenter/Analytics (= 1.5.0)
   - AppCenter/Crashes (= 1.5.0)
   - AppCenterReactNativeShared (= 1.4.0)
-  - AppCenterXCUITestExtensions
+  - AppCenterXCUITestExtensions (= 1.0.0)
 
 SPEC CHECKSUMS:
   AppCenter: 42c293f0de27e173aacd600a55a49da5317cd40e
   AppCenterReactNativeShared: 056324303732841fff14f2a71c4a6839831b038b
   AppCenterXCUITestExtensions: 8825ed941664fa21d6740a5ed6928a84c06623ac
 
-PODFILE CHECKSUM: 8448c129966a122b119b28300d71857261d22477
+PODFILE CHECKSUM: cf24496c75a8781380b59c03092298d2be443a0a
 
 COCOAPODS: 1.3.1

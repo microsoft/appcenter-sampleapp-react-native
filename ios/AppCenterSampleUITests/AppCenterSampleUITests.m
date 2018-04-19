@@ -17,9 +17,7 @@
 
 - (void)setUp {
     [super setUp];
-
     self.continueAfterFailure = NO;
-    [ACTLaunch launch];
 }
 
 - (void)tearDown {
@@ -27,15 +25,15 @@
 }
 
 - (void)testNavigation {
-  XCUIApplication *app = [ACTLaunch launchApplication:[[XCUIApplication alloc] init]];
-
-  [/*@START_MENU_TOKEN@*/app.otherElements[@"welcomeScreen"]/*[["app","[",".otherElements[@\"welcomeScreen\"]"],[[[-1,0,1]],[[1,8,3],[-1,3,3],[1,2,2]],[[1,8,3],[-1,3,3]],[[-1,7],[-1,6],[1,5,5],[-1,4,4]],[[-1,7],[-1,6],[1,5,5]],[[-1,7],[-1,6]]],[0,0,3,0]]@END_MENU_TOKEN@*/ swipeLeft];
-  [/*@START_MENU_TOKEN@*/app.otherElements[@"buildScreen"]/*[["app","[",".otherElements[@\"buildcreen\"]"],[[[-1,0,1]],[[1,8,3],[-1,3,3],[1,2,2]],[[1,8,3],[-1,3,3]],[[-1,7],[-1,6],[1,5,5],[-1,4,4]],[[-1,7],[-1,6],[1,5,5]],[[-1,7],[-1,6]]],[0,0,3,0]]@END_MENU_TOKEN@*/ swipeLeft];
-  [/*@START_MENU_TOKEN@*/app.otherElements[@"testScreen"]/*[["app","[",".otherElements[@\"testScreen\"]"],[[[-1,0,1]],[[1,8,3],[-1,3,3],[1,2,2]],[[1,8,3],[-1,3,3]],[[-1,7],[-1,6],[1,5,5],[-1,4,4]],[[-1,7],[-1,6],[1,5,5]],[[-1,7],[-1,6]]],[0,0,3,0]]@END_MENU_TOKEN@*/ swipeLeft];
-  [/*@START_MENU_TOKEN@*/app.otherElements[@"distributeScreen"]/*[["app","[",".otherElements[@\"distributeScreen\"]"],[[[-1,0,1]],[[1,8,3],[-1,3,3],[1,2,2]],[[1,8,3],[-1,3,3]],[[-1,7],[-1,6],[1,5,5],[-1,4,4]],[[-1,7],[-1,6],[1,5,5]],[[-1,7],[-1,6]]],[0,0,3,0]]@END_MENU_TOKEN@*/ swipeLeft];
-  [/*@START_MENU_TOKEN@*/app.otherElements[@"crashesScreen"]/*[["app","[",".otherElements[@\"crashesScreen\"]"],[[[-1,0,1]],[[1,8,3],[-1,3,3],[1,2,2]],[[1,8,3],[-1,3,3]],[[-1,7],[-1,6],[1,5,5],[-1,4,4]],[[-1,7],[-1,6],[1,5,5]],[[-1,7],[-1,6]]],[0,0,3,0]]@END_MENU_TOKEN@*/ swipeLeft];
-  [/*@START_MENU_TOKEN@*/app.otherElements[@"analyticsScreen"]/*[["app","[",".otherElements[@\"analyticsScreen\"]"],[[[-1,0,1]],[[1,8,3],[-1,3,3],[1,2,2]],[[1,8,3],[-1,3,3]],[[-1,7],[-1,6],[1,5,5],[-1,4,4]],[[-1,7],[-1,6],[1,5,5]],[[-1,7],[-1,6]]],[0,0,3,0]]@END_MENU_TOKEN@*/ swipeLeft];
-  [/*@START_MENU_TOKEN@*/app.otherElements[@"pushScreen"]/*[["["app","[",".otherElements[@\"pushScreen\"]"],[[[-1,0,1]],[[1,8,3],[-1,3,3],[1,2,2]],[[1,8,3],[-1,3,3]],[[-1,7],[-1,6],[1,5,5],[-1,4,4]],[[-1,7],[-1,6],[1,5,5]],[[-1,7],[-1,6]]],[0,0,3,0]]@END_MENU_TOKEN@*/ swipeLeft];
+  XCUIApplication *app =  [ACTLaunch launch];
+  [[app.otherElements matchingIdentifier:@"welcomeScreen"].element swipeLeft];
+  [[app.otherElements matchingIdentifier:@"buildScreen"].element swipeLeft];
+  [[app.otherElements matchingIdentifier:@"testScreen"].element swipeLeft];
+  [[app.otherElements matchingIdentifier:@"distributeScreen"].element swipeLeft];
+  [[app.otherElements matchingIdentifier:@"crashesScreen"].element swipeLeft];
+  [[app.otherElements matchingIdentifier:@"analyticsScreen"].element swipeLeft];
+  [[app.otherElements matchingIdentifier:@"pushScreen"].element swipeLeft];
+  [app terminate];
 }
 
 @end
