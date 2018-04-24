@@ -7,7 +7,7 @@ import images from '../images';
 export class PushScreen extends React.Component {
     render() {
         return (
-            <View style={{ flex: 1 }} testID="pushScreen">
+            <View style={{ flex: 1 }} testID="pushScreen" accessibilityLabel={"pushScreen"} accessible={true}>
                 <BaseScreen options={
                     {
                         title: "Push",

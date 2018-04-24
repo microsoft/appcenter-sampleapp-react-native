@@ -7,7 +7,7 @@ import images from '../images';
 export class DistributeScreen extends React.Component {
     render() {
         return (
-            <View style={{ flex: 1 }} testID="distributeScreen">
+            <View style={{ flex: 1 }} testID="distributeScreen" accessibilityLabel={"distributeScreen"} accessible={true}>
                 <BaseScreen options={
                     {
                         title: "Distribute",

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { TabNavigator } from 'react-navigation';
 import { WelcomeScreen } from './screens/welcomeScreen';
 import { BuildScreen } from './screens/buildScreen';
@@ -54,6 +54,6 @@ const RootTabNavigator = TabNavigator(
 
 export default class App extends React.Component {
   render() {
-    return <RootTabNavigator />;
+  return <RootTabNavigator />;
   }
 }

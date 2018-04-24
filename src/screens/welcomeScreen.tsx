@@ -6,7 +6,7 @@ import images from '../images';
 export class WelcomeScreen extends React.Component {
     render() {
         return (
-            <View style={{ flex: 1 }} testID="welcomeScreen">
+            <View style={{ flex: 1 }} testID="welcomeScreen" accessibilityLabel={"welcomeScreen"} accessible={true}>
                 <BaseScreen options={
                     {
                         title: "Welcome",

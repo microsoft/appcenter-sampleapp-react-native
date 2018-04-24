@@ -7,7 +7,7 @@ import images from '../images';
 export class TestScreen extends React.Component {
     render() {
         return (
-            <View style={{ flex: 1 }} testID="testScreen">
+            <View style={{ flex: 1 }} testID="testScreen" accessibilityLabel={"testScreen"} accessible={true}>
                 <BaseScreen options={
                     {
                         title: "Test",

@@ -9,7 +9,7 @@ export class CrashesScreen extends React.Component {
 
     render() {
         return (
-            <View style={{ flex: 1 }} testID="crashesScreen">
+            <View style={{ flex: 1 }} testID="crashesScreen" accessibilityLabel={"crashesScreen"} accessible={true}>
                 <BaseScreen options={
                     {
                         title: "Crashes",
