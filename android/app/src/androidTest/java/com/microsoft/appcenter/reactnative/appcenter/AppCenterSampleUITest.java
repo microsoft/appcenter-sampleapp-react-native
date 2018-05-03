@@ -5,9 +5,11 @@ import android.support.test.espresso.core.deps.guava.collect.Lists;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
-
+import com.microsoft.appcenter.espresso.Factory;
+import com.microsoft.appcenter.espresso.ReportHelper;
 import com.appcentersample.MainActivity;
 
+import org.junit.After;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,6 +25,9 @@ import static org.hamcrest.core.AllOf.allOf;
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class AppCenterSampleUITest {
+
+    @Rule
+    public ReportHelper reportHelper = Factory.getReportHelper();
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
@@ -49,5 +54,10 @@ public class AppCenterSampleUITest {
             // wait for 5 seconds after swiping
             Thread.sleep(5000);
         }
+    }
+
+    @After
+    public void tearDown(){
+        reportHelper.label("Stopping App");
     }
 }
