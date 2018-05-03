@@ -26,13 +26,14 @@
 
 - (void)testNavigation {
   XCUIApplication *app =  [ACTLaunch launch];
-  [[app.otherElements matchingIdentifier:@"welcomeScreen"].element swipeLeft];
-  [[app.otherElements matchingIdentifier:@"buildScreen"].element swipeLeft];
-  [[app.otherElements matchingIdentifier:@"testScreen"].element swipeLeft];
-  [[app.otherElements matchingIdentifier:@"distributeScreen"].element swipeLeft];
-  [[app.otherElements matchingIdentifier:@"crashesScreen"].element swipeLeft];
-  [[app.otherElements matchingIdentifier:@"analyticsScreen"].element swipeLeft];
-  [[app.otherElements matchingIdentifier:@"pushScreen"].element swipeLeft];
+  
+  [[app.otherElements matchingIdentifier:@"welcomeScreen"].element.firstMatch swipeLeft];
+  [[app.otherElements matchingIdentifier:@"buildScreen"].element.firstMatch swipeLeft];
+  [[app.otherElements matchingIdentifier:@"testScreen"].element.firstMatch swipeLeft];
+  [[app.otherElements matchingIdentifier:@"distributeScreen"].element.firstMatch swipeLeft];
+  [[app.otherElements matchingIdentifier:@"crashesScreen"].element.firstMatch swipeLeft];
+  [[app.otherElements matchingIdentifier:@"analyticsScreen"].element.firstMatch swipeLeft];
+  [[app.otherElements matchingIdentifier:@"pushScreen"].element.firstMatch swipeLeft];
   [app terminate];
 }
 
