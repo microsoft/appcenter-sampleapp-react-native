@@ -28,7 +28,7 @@ export type Props = {
 }
 
 export default class BaseScreen extends React.Component<Props> {
-    codepush: CodePush
+    codepush: any
 
     constructor(props: Props) {
         super(props);
