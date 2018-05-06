@@ -39,10 +39,10 @@ public class AppCenterSampleUITest {
                 "welcomeScreen",
                 "buildScreen",
                 "testScreen",
+                "codePushScreen",
                 "distributeScreen",
                 "crashesScreen",
-                "analyticsScreen",
-                "pushScreen");
+                "analyticsScreen");
         swipeScreens(screens);
     }
 

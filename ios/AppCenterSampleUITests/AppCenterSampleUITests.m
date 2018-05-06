@@ -30,10 +30,10 @@
   [[app.otherElements matchingIdentifier:@"welcomeScreen"].element.firstMatch swipeLeft];
   [[app.otherElements matchingIdentifier:@"buildScreen"].element.firstMatch swipeLeft];
   [[app.otherElements matchingIdentifier:@"testScreen"].element.firstMatch swipeLeft];
+  [[app.otherElements matchingIdentifier:@"codePushScreen"].element.firstMatch swipeLeft];
   [[app.otherElements matchingIdentifier:@"distributeScreen"].element.firstMatch swipeLeft];
   [[app.otherElements matchingIdentifier:@"crashesScreen"].element.firstMatch swipeLeft];
   [[app.otherElements matchingIdentifier:@"analyticsScreen"].element.firstMatch swipeLeft];
-  [[app.otherElements matchingIdentifier:@"pushScreen"].element.firstMatch swipeLeft];
   [app terminate];
 }
 
