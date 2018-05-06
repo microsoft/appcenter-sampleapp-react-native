@@ -21,6 +21,9 @@ const RootTabNavigator = TabNavigator(
     Test: {
       screen: TestScreen,
     },
+    CodePush: {
+      screen: CodePushScreen
+    },
     Distribute: {
       screen: DistributeScreen,
     },
@@ -32,9 +35,6 @@ const RootTabNavigator = TabNavigator(
     },
     Push: {
       screen: PushScreen,
-    },
-    CodePush: {
-      screen: CodePushScreen
     }
   },
   {
