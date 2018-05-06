@@ -874,11 +874,12 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = FFY96ZBU8L;
+						ProvisioningStyle = Manual;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = FFY96ZBU8L;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = YFVZ335843;
+						ProvisioningStyle = Manual;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -893,8 +894,8 @@
 					};
 					F81B57FB2080D79B0066D3CA = {
 						CreatedOnToolsVersion = 9.3;
-						DevelopmentTeam = FFY96ZBU8L;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = YFVZ335843;
+						ProvisioningStyle = Manual;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 				};
@@ -1492,6 +1493,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = FFY96ZBU8L;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1520,6 +1522,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppCenterSample.app/AppCenterSample";
 			};
 			name = Debug;
@@ -1528,6 +1531,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = FFY96ZBU8L;
 				HEADER_SEARCH_PATHS = (
@@ -1553,6 +1557,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppCenterSample.app/AppCenterSample";
 			};
 			name = Release;
@@ -1562,11 +1567,11 @@
 			baseConfigurationReference = 741DAE30E253DC4B2B42FCB3 /* Pods-AppCenterSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = FFY96ZBU8L;
+				DEVELOPMENT_TEAM = YFVZ335843;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative",
@@ -1583,8 +1588,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pniko.acgithub;
 				PRODUCT_NAME = AppCenterSample;
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "5b8f9ef3-dab6-4405-b888-8f8923b5d110";
+				PROVISIONING_PROFILE_SPECIFIER = Build2018;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1594,10 +1599,10 @@
 			baseConfigurationReference = A8C0E8067EE4DA819AEE42E4 /* Pods-AppCenterSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FFY96ZBU8L;
+				DEVELOPMENT_TEAM = YFVZ335843;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/appcenter/ios/AppCenterReactNative",
@@ -1614,8 +1619,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pniko.acgithub;
 				PRODUCT_NAME = AppCenterSample;
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "5b8f9ef3-dab6-4405-b888-8f8923b5d110";
+				PROVISIONING_PROFILE_SPECIFIER = Build2018;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -1876,9 +1881,10 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = FFY96ZBU8L;
+				DEVELOPMENT_TEAM = YFVZ335843;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1887,6 +1893,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Microsoft.AppCenterSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5b8f9ef3-dab6-4405-b888-8f8923b5d110";
+				PROVISIONING_PROFILE_SPECIFIER = Build2018;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = AppCenterSample;
 			};
@@ -1913,10 +1921,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = FFY96ZBU8L;
+				DEVELOPMENT_TEAM = YFVZ335843;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = AppCenterSampleUITests/Info.plist;
@@ -1924,6 +1933,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Microsoft.AppCenterSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5b8f9ef3-dab6-4405-b888-8f8923b5d110";
+				PROVISIONING_PROFILE_SPECIFIER = Build2018;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = AppCenterSample;
 			};
