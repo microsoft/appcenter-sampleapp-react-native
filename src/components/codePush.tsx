@@ -10,7 +10,7 @@ type State = {
     }
 }
 
-export default class CodePush extends React.Component<{}, State> {
+class CodePush extends React.Component<{}, State> {
     constructor(props: {}, state: State) {
         super(props, state);
         this.state = {};
@@ -90,3 +90,12 @@ const styles = StyleSheet.create({
         fontSize: 14,
     }
 });
+
+let codePushOptions = { 
+    checkFrequency: CodePushLib.CheckFrequency.ON_APP_RESUME,
+    installMode: CodePushLib.InstallMode.ON_NEXT_RESUME 
+};
+
+const CodePushConfigured = CodePushLib(codePushOptions)(CodePush)
+
+export default CodePushConfigured
