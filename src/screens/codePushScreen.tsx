@@ -23,6 +23,12 @@ export class CodePushScreen extends React.Component {
                         bottomContainer: {
                             backgroundColor: "#009688",
                             description: "Deploy mobile app updates directly to their users' devices.",
+                            bottomButton: {
+                                text: "Sync",
+                                onPress: () => {
+                                    self.baseScreen.codepush.sync();
+                                }
+                            }
                         },
                         codepush: true
                     }
