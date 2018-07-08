@@ -12,9 +12,9 @@
     "@types/react": "^16.1.0",
     "@types/react-native": "^0.52.22",
     "@types/react-navigation": "^1.5.2",
-    "appcenter": "^1.5.0",
-    "appcenter-analytics": "^1.5.0",
-    "appcenter-crashes": "^1.5.0",
+    "appcenter": "^1.6.0",
+    "appcenter-analytics": "^1.6.0",
+    "appcenter-crashes": "^1.6.0",
     "react": "^16.3.0-alpha.1",
     "react-native": "0.54.4",
     "react-native-code-push": "^5.3.2",
@@ -54,6 +54,11 @@
       "ts-jest": {
         "useBabelrc": true
       }
-    }
+    },
+    "setupFiles": [
+      "./node_modules/appcenter/test/AppCenterMock.js",
+      "./node_modules/appcenter-analytics/test/AppCenterAnalyticsMock.js",
+      "./node_modules/appcenter-crashes/test/AppCenterCrashesMock.js"
+    ]
   }
 }
