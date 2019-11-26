@@ -52,4 +52,7 @@ buck-out/
 */fastlane/Preview.html
 */fastlane/screenshots
 
-ios/Pods/
+# Bundle artifact
+*.jsbundle
+# CocoaPods
+/ios/Pods/
