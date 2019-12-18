@@ -1,1 +1,6 @@
+/**
+ * @format
+ */
+
 import './src/index';
+

@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import App from './App';
+import AppContainer from './App';
 
-AppRegistry.registerComponent('AppCenterSample', () => App);
+AppRegistry.registerComponent("AppCenterSample", () => AppContainer);
