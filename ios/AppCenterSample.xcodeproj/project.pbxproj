@@ -13,7 +13,7 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* AppCenterSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AppCenterSampleTests.m */; };
-		079931EEF4BD415D156B82D2 /* Pods_AppCenterSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDFBF687ED92BAFDEAE0341 /* Pods_AppCenterSample.framework */; };
+		09AFDCF29A7ACB614ECEC7D2 /* libPods-AppCenterSampleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 579497DD6DDCF1DD86CE9464 /* libPods-AppCenterSampleUITests.a */; };
 		110A6083461D4819B86CAB4F /* libAppCenterReactNativeCrashes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DAB5A0E441E407A8A300246 /* libAppCenterReactNativeCrashes.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
@@ -36,13 +36,13 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* AppCenterSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AppCenterSampleTests.m */; };
-		368E1DE8FD180E63A77B036B /* Pods_AppCenterSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E0872E2433FE19D0982883 /* Pods_AppCenterSampleUITests.framework */; };
 		4DDC7C155DF24F9ABD082034 /* libAppCenterReactNativeAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DEE0792729493987015322 /* libAppCenterReactNativeAnalytics.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		9D21814384EB4C699A381F89 /* libCodePush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4A2C5BA6634A418B05E872 /* libCodePush.a */; };
 		9F6AFF0BAC1B475B904B36A7 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F95D27976AE4C9589B71976 /* AppCenter-Config.plist */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		E04B11C04A2700914CF74D0D /* libPods-AppCenterSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E23780D64BA6AF3B1002803 /* libPods-AppCenterSample.a */; };
 		E266E77111B64A28B0DC59BA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B161D91EEA2240369C5BBC7E /* libz.tbd */; };
 		F5BDCDD30944483D93B1D4D5 /* libAppCenterReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E3DE05B7D84B74ADB9B3CC /* libAppCenterReactNative.a */; };
 		F81B57FF2080D79B0066D3CA /* AppCenterSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F81B57FE2080D79B0066D3CA /* AppCenterSampleUITests.m */; };
@@ -395,21 +395,21 @@
 		3D4A2C5BA6634A418B05E872 /* libCodePush.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libCodePush.a; sourceTree = "<group>"; };
 		49CEFE2337864338B703865C /* AppCenterReactNativeCrashes.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeCrashes.xcodeproj; path = "../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes.xcodeproj"; sourceTree = "<group>"; };
 		54DEE0792729493987015322 /* libAppCenterReactNativeAnalytics.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNativeAnalytics.a; sourceTree = "<group>"; };
+		579497DD6DDCF1DD86CE9464 /* libPods-AppCenterSampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppCenterSampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		741DAE30E253DC4B2B42FCB3 /* Pods-AppCenterSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCenterSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppCenterSample/Pods-AppCenterSample.debug.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		7E23780D64BA6AF3B1002803 /* libPods-AppCenterSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppCenterSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		9DAB5A0E441E407A8A300246 /* libAppCenterReactNativeCrashes.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNativeCrashes.a; sourceTree = "<group>"; };
 		A4E3DE05B7D84B74ADB9B3CC /* libAppCenterReactNative.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNative.a; sourceTree = "<group>"; };
 		A5914266C0744CD788C46CC4 /* AppCenterReactNativeAnalytics.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeAnalytics.xcodeproj; path = "../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics.xcodeproj"; sourceTree = "<group>"; };
 		A8C0E8067EE4DA819AEE42E4 /* Pods-AppCenterSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCenterSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppCenterSample/Pods-AppCenterSample.release.xcconfig"; sourceTree = "<group>"; };
 		AADB1B64C6FB4EBE9D05017F /* AppCenterReactNative.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNative.xcodeproj; path = ../node_modules/appcenter/ios/AppCenterReactNative.xcodeproj; sourceTree = "<group>"; };
-		ACDFBF687ED92BAFDEAE0341 /* Pods_AppCenterSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppCenterSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B161D91EEA2240369C5BBC7E /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C90F16A2C69B7DE01B0C87C6 /* Pods-AppCenterSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCenterSampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppCenterSampleUITests/Pods-AppCenterSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD98873C1A516B44522083EE /* Pods-AppCenterSampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCenterSampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppCenterSampleUITests/Pods-AppCenterSampleUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E3E0872E2433FE19D0982883 /* Pods_AppCenterSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppCenterSampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81B57FC2080D79B0066D3CA /* AppCenterSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppCenterSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81B57FE2080D79B0066D3CA /* AppCenterSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppCenterSampleUITests.m; sourceTree = "<group>"; };
 		F81B58002080D79B0066D3CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -448,7 +448,7 @@
 				110A6083461D4819B86CAB4F /* libAppCenterReactNativeCrashes.a in Frameworks */,
 				9D21814384EB4C699A381F89 /* libCodePush.a in Frameworks */,
 				E266E77111B64A28B0DC59BA /* libz.tbd in Frameworks */,
-				079931EEF4BD415D156B82D2 /* Pods_AppCenterSample.framework in Frameworks */,
+				E04B11C04A2700914CF74D0D /* libPods-AppCenterSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +478,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				368E1DE8FD180E63A77B036B /* Pods_AppCenterSampleUITests.framework in Frameworks */,
+				09AFDCF29A7ACB614ECEC7D2 /* libPods-AppCenterSampleUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,8 +608,8 @@
 			children = (
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
 				B161D91EEA2240369C5BBC7E /* libz.tbd */,
-				ACDFBF687ED92BAFDEAE0341 /* Pods_AppCenterSample.framework */,
-				E3E0872E2433FE19D0982883 /* Pods_AppCenterSampleUITests.framework */,
+				7E23780D64BA6AF3B1002803 /* libPods-AppCenterSample.a */,
+				579497DD6DDCF1DD86CE9464 /* libPods-AppCenterSampleUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -851,7 +851,6 @@
 				F81B57F82080D79B0066D3CA /* Sources */,
 				F81B57F92080D79B0066D3CA /* Frameworks */,
 				F81B57FA2080D79B0066D3CA /* Resources */,
-				27AAC83266B4CF92F9B80C78 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1357,24 +1356,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		27AAC83266B4CF92F9B80C78 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AppCenterSampleUITests/Pods-AppCenterSampleUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AppCenterXCUITestExtensions/AppCenterXCUITestExtensions.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppCenterXCUITestExtensions.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppCenterSampleUITests/Pods-AppCenterSampleUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
