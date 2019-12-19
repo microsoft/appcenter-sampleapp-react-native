@@ -124,7 +124,6 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-
     defaultConfig {
         applicationId "com.appcentersample"
         minSdkVersion rootProject.minSdkVersion
@@ -181,7 +180,6 @@ android {
 }
 
 dependencies {
-    implementation project(':react-native-code-push')
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.facebook.react:react-native:+'
     implementation 'androidx.appcompat:appcompat:1.1.0'
