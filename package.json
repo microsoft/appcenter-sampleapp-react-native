@@ -9,7 +9,6 @@
     "test": "jest",
     "lint": "eslint .",
     "prettier": "prettier --write \"**/*.+(js|ts|tsx)\""
-
   },
   "dependencies": {
     "@react-native-community/cli-platform-android": "^3.0.3",

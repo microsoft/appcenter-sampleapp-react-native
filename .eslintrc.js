@@ -33,6 +33,7 @@ module.exports = {
   },
   extends: [
     // any other plugins here,
-    "plugin:prettier/recommended"
+    "prettier",
+    "prettier/@typescript-eslint"
   ]
 };
