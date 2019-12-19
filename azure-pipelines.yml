@@ -27,8 +27,4 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     gradleOptions: '-Xmx3072m'
-    sonarQubeRunAnalysis: false
-- task: Xcode@5
-  inputs:
-    actions: 'build'
-    packageApp: true
+    sonarQubeRunAnalysis: true
