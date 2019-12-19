@@ -1,10 +1,10 @@
 package com.microsoft.appcenter.reactnative.appcenter;
 
-import android.support.test.espresso.ViewInteraction;
-import android.support.test.espresso.core.deps.guava.collect.Lists;
-import android.support.test.rule.ActivityTestRule;
-import android.support.test.runner.AndroidJUnit4;
-import android.test.suitebuilder.annotation.LargeTest;
+import androidx.test.espresso.ViewInteraction;
+import androidx.test.espresso.core.internal.deps.guava.collect.Lists;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.LargeTest;
+import androidx.test.rule.ActivityTestRule;
 import com.microsoft.appcenter.espresso.Factory;
 import com.microsoft.appcenter.espresso.ReportHelper;
 import com.appcentersample.MainActivity;
@@ -16,9 +16,9 @@ import org.junit.runner.RunWith;
 
 import java.util.List;
 
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.ViewActions.swipeLeft;
-import static android.support.test.espresso.matcher.ViewMatchers.withTagValue;
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.swipeLeft;
+import static androidx.test.espresso.matcher.ViewMatchers.withTagValue;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.core.AllOf.allOf;
 
@@ -49,7 +49,7 @@ public class AppCenterSampleUITest {
     private void swipeScreens(List<String> screens) throws InterruptedException {
         for (String screen : screens) {
             ViewInteraction viewInteraction = onView(
-                    allOf(withTagValue(is((Object) screen))));
+                    allOf(withTagValue(is(screen))));
             viewInteraction.perform(swipeLeft());
             // wait for 5 seconds after swiping
             Thread.sleep(5000);
@@ -57,7 +57,7 @@ public class AppCenterSampleUITest {
     }
 
     @After
-    public void tearDown(){
+    public void tearDown() {
         reportHelper.label("Stopping App");
     }
 }

@@ -1,10 +1,7 @@
 package com.appcentersample;
 
 import android.app.AlertDialog;
-import android.app.Application;
-import android.content.DialogInterface;
-
-import com.facebook.react.bridge.BaseJavaModule;
+import androidx.annotation.NonNull;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -19,6 +16,7 @@ public class AppCenterSampleNativeModule extends ReactContextBaseJavaModule {
         super(reactContext);
     }
 
+    @NonNull
     @Override
     public String getName() {
         return "AppCenterSample";
@@ -28,23 +26,21 @@ public class AppCenterSampleNativeModule extends ReactContextBaseJavaModule {
     public void showColoredEventsDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getCurrentActivity());
         CharSequence[] colors = {"Yellow", "Blue", "Red"};
-        builder.setTitle("Pick a color").setItems(colors, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int index) {
-                Map<String, String> properties = new HashMap<>();
-                switch (index) {
-                    case 0:
-                        properties.put("Color", "Yellow");
-                        Analytics.trackEvent("Color event", properties);
-                        break;
-                    case 1:
-                        properties.put("Color", "Blue");
-                        Analytics.trackEvent("Color event", properties);
-                        break;
-                    case 2:
-                        properties.put("Color", "Red");
-                        Analytics.trackEvent("Color event", properties);
-                        break;
-                }
+        builder.setTitle("Pick a color").setItems(colors, (dialog, index) -> {
+            Map<String, String> properties = new HashMap<>();
+            switch (index) {
+                case 0:
+                    properties.put("Color", "Yellow");
+                    Analytics.trackEvent("Color event", properties);
+                    break;
+                case 1:
+                    properties.put("Color", "Blue");
+                    Analytics.trackEvent("Color event", properties);
+                    break;
+                case 2:
+                    properties.put("Color", "Red");
+                    Analytics.trackEvent("Color event", properties);
+                    break;
             }
         });
         builder.create().show();
