@@ -1,6 +1,8 @@
 platform :ios, '10.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
+use_native_modules!
+
 target 'AppCenterSample' do
 
   pod 'React', :path => '../node_modules/react-native/'
@@ -45,8 +47,6 @@ target 'AppCenterSample' do
   pod 'appcenter', path: '../node_modules/appcenter/ios'
   pod 'appcenter-analytics', path: '../node_modules/appcenter-analytics/ios'
   pod 'appcenter-crashes', path: '../node_modules/appcenter-crashes/ios'
-
-  use_native_modules!
 end
 
 # use_frameworks!

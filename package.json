@@ -6,9 +6,11 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "build": "npm install && cd ./android && ./gradlew build && cd ../ios && pod install --repo-update && cd ..",
+    "clean": "rm -rf ./node_modules ./ios/{build,Pods,*.xcworkspace} ./android/{.gradle,.idea,*.iml}",
     "test": "jest",
     "lint": "eslint .",
-    "prettier": "prettier --write \"**/*.+(js|ts|tsx)\""
+    "format": "prettier --write \"**/*.+(js|ts|tsx)\""
   },
   "dependencies": {
     "@react-native-community/cli-platform-android": "^3.0.3",
