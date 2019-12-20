@@ -18,6 +18,12 @@ steps:
 - script: |
     npm install
   displayName: 'npm install'
+
+- script: |
+    npm run lint
+    npm run test
+  displayName: 'npm lint & test'
+  
 - task: Gradle@2
   inputs:
     gradleWrapperFile: 'gradlew'
