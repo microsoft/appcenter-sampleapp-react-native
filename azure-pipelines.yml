@@ -4,26 +4,33 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- master
+  branches:
+    include:
+      - master
+pr:
+  - master
 
 pool:
   vmImage: 'macos-latest'
 
 steps:
-- task: NodeTool@0
+- task: UseNode@1
   inputs:
-    versionSpec: '10.x'
+    version: '12.x'
   displayName: 'Install Node.js'
 
 - script: |
     npm install
   displayName: 'npm install'
 
-- script: |
-    npm run lint
-    npm run test
-  displayName: 'npm lint & test'
-  
+#- script: |
+#    npm run lint
+#    npm run test
+#  displayName: 'npm lint & test'
+- task: CocoaPods@0
+  inputs:
+    workingDirectory: '$(Build.Repository.LocalPath)/ios'
+    forceRepoUpdate: true
 - task: Gradle@2
   inputs:
     gradleWrapperFile: 'gradlew'
@@ -34,3 +41,16 @@ steps:
     javaHomeOption: 'JDKVersion'
     gradleOptions: '-Xmx3072m'
     sonarQubeRunAnalysis: true
+
+- task: Xcode@5
+  inputs:
+    actions: 'clean build'''
+    configuration: 'Release'
+    sdk: 'iphoneos'
+    xcWorkspacePath: '$(Build.Repository.LocalPath)/ios/*.xcworkspace'
+    scheme: 'AppCenterSample'
+    xcodeVersion: 'specifyPath'
+    xcodeDeveloperDir: '/Applications/Xcode_11.3.app'
+    packageApp: false
+    workingDirectory: '$(Build.Repository.LocalPath)/ios'
+    publishJUnitResults: true
