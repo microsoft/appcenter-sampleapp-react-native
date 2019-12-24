@@ -42,11 +42,6 @@ target 'AppCenterSample' do
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
-
-  # App Center Podspecs
-  pod 'appcenter', path: '../node_modules/appcenter/ios'
-  pod 'appcenter-analytics', path: '../node_modules/appcenter-analytics/ios'
-  pod 'appcenter-crashes', path: '../node_modules/appcenter-crashes/ios'
 end
 
 # use_frameworks!

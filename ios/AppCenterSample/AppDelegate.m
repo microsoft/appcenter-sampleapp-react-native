@@ -9,9 +9,9 @@
 
 #import "AppDelegate.h"
 #import <CodePush/CodePush.h>
-#import "AppCenterReactNative.h"
-#import "AppCenterReactNativeAnalytics.h"
-#import "AppCenterReactNativeCrashes.h"
+#import <AppCenterReactNative.h>
+#import <AppCenterReactNativeAnalytics.h>
+#import <AppCenterReactNativeCrashes.h>
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
