@@ -73,7 +73,7 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-        entryFile: "index.js",
+        entryFile   : "index.js",
         enableHermes: false,  // clean and rebuild if changing
 ]
 
@@ -114,21 +114,20 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  * on project.ext.react, JavaScript will not be compiled to Hermes Bytecode
  * and the benefits of using Hermes will therefore be sharply reduced.
  */
-def enableHermes = project.ext.react.get("enableHermes", false);
+def enableHermes = project.ext.react.get("enableHermes", false)
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion rootProject.compileSdkVersion
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-
     defaultConfig {
         applicationId "com.appcentersample"
-        minSdkVersion 16
-        targetSdkVersion 26
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
         versionName "1.0"
         ndk {
@@ -136,24 +135,33 @@ android {
         }
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
     }
+
+    // Add this block to enable building App Bundles for Android Apps
+    bundle {
+        density {
+            // Different APKs are generated for devices with different screen densities; true by default.
+            enableSplit true
+        }
+        abi {
+            // Different APKs are generated for devices with different CPU architectures; true by default.
+            enableSplit true
+        }
+        language {
+            // This is disabled so that the App Bundle does NOT split the APK for each language.
+            // We're gonna use the same APK for all languages.
+            enableSplit false
+        }
+    }
+
     splits {
         abi {
             reset()
             enable enableSeparateBuildPerCPUArchitecture
             universalApk false  // If true, also generate a universal APK
             include "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
-
-        }
-    }
-    signingConfigs {
-        debug {
-            
         }
     }
     buildTypes {
-        debug {
-
-        }
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://facebook.github.io/react-native/docs/signed-apk-android.
@@ -190,34 +198,35 @@ android {
 }
 
 dependencies {
-    implementation project(':react-native-code-push')
-    implementation project(':appcenter-crashes')
-    implementation project(':appcenter-analytics')
-    implementation project(':appcenter')
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "com.android.support:appcompat-v7:28.0.0"
-    implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
-    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.facebook.react:react-native:+'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha03'
 
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2') {
+    // Unit Tests
+    testImplementation 'androidx.test.ext:junit:1.1.1'
+
+    // UI Testing
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.2.0') {
         exclude module: 'support-annotations'
         exclude module: 'jsr305'
     }
-    androidTestCompile('com.android.support.test:runner:0.5') {
+    androidTestImplementation('androidx.test:runner:1.2.0') {
         exclude module: 'support-annotations'
     }
-    androidTestCompile("com.android.support.test:rules:0.5") {
+    androidTestImplementation('androidx.test:rules:1.2.0') {
         exclude module: 'support-annotations'
     }
-    androidTestCompile('com.microsoft.appcenter:espresso-test-extension:1.2')
+    androidTestImplementation 'com.microsoft.appcenter:espresso-test-extension:1.4'
 
+    // Hermes
     if (enableHermes) {
-      def hermesPath = "../../node_modules/hermesvm/android/";
-      debugImplementation files(hermesPath + "hermes-debug.aar")
-      releaseImplementation files(hermesPath + "hermes-release.aar")
+        def hermesPath = "../../node_modules/hermesvm/android/"
+        debugImplementation files(hermesPath + "hermes-debug.aar")
+        releaseImplementation files(hermesPath + "hermes-release.aar")
     } else {
-      implementation jscFlavor
+        implementation jscFlavor
     }
 }
 

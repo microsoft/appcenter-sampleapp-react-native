@@ -20,7 +20,7 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-project.xcworkspace
+*.xcworkspace
 
 # Android/IntelliJ
 #
@@ -56,3 +56,6 @@ buck-out/
 *.jsbundle
 # CocoaPods
 /ios/Pods/
+
+# VS Code
+.project

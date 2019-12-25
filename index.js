@@ -2,5 +2,4 @@
  * @format
  */
 
-import './src/index';
-
+import "./src/index";
