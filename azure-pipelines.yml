@@ -33,14 +33,15 @@ steps:
     forceRepoUpdate: true
 - task: Gradle@2
   inputs:
-    gradleWrapperFile: '$(Build.Repository.LocalPath)/android/gradlew'
-    workingDirectory: '$(Build.Repository.LocalPath)/android'
+    gradleWrapperFile: '$(Build.Repository.LocalPath)/gradlew'
+    workingDirectory: '$(Build.Repository.LocalPath)'
     tasks: 'clean build test assembleRelease'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.8'
     gradleOptions: '-Xmx3072m'
-    sonarQubeRunAnalysis: true
+    sonarQubeRunAnalysis: false 
 
 - task: Xcode@5
   inputs:
