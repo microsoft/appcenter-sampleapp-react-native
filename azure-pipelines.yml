@@ -45,7 +45,7 @@ steps:
 
 - task: Xcode@5
   inputs:
-    actions: 'clean build'''
+    actions: 'clean build'
     configuration: 'Release'
     sdk: 'iphoneos'
     xcWorkspacePath: '$(Build.Repository.LocalPath)/ios/*.xcworkspace'
