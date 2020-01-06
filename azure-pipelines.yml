@@ -33,8 +33,8 @@ steps:
     forceRepoUpdate: true
 - task: Gradle@2
   inputs:
-    gradleWrapperFile: '$(Build.Repository.LocalPath)/gradlew'
-    workingDirectory: '$(Build.Repository.LocalPath)'
+    gradleWrapperFile: '$(Build.Repository.LocalPath)/android/gradlew'
+    workingDirectory: '$(Build.Repository.LocalPath)/android'
     tasks: 'clean build test assembleRelease'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
