@@ -8,10 +8,11 @@ The App Center SDK modules are already integrated within the application.
 
 ### Build status (master branch)
 
-| Build Service        | Status                                                                                                                                   |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| App Center (iOS)     | [![Build status](https://build.appcenter.ms/v0.1/apps/b0241ddd-7d25-4594-9066-f337e833eeaf/branches/master/badge)](https://appcenter.ms) |
-| App Center (Android) | [![Build status](https://build.appcenter.ms/v0.1/apps/d15a5805-93ae-4edb-bd37-f81e51f92626/branches/master/badge)](https://appcenter.ms) |
+| Build Service                   | Status                                                                                                                                                                                                                                                                |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| App Center (iOS)                | [![Build status](https://build.appcenter.ms/v0.1/apps/b0241ddd-7d25-4594-9066-f337e833eeaf/branches/master/badge)](https://appcenter.ms)                                                                                                                              |
+| App Center (Android)            | [![Build status](https://build.appcenter.ms/v0.1/apps/d15a5805-93ae-4edb-bd37-f81e51f92626/branches/master/badge)](https://appcenter.ms)                                                                                                                              |
+| Azure Pipelines (iOS & Android) | [![Build Status](https://dev.azure.com/msmobilecenter/Mobile-Center/_apis/build/status/sampleapp/microsoft.appcenter-sampleapp-react-native?branchName=master)](https://dev.azure.com/msmobilecenter/Mobile-Center/_build/latest?definitionId=3728&branchName=master) |
 
 ## Tutorials
 
@@ -19,7 +20,7 @@ First navigate to the **Getting Started** tutorial linked below. After following
 
 ## How to run the app
 
-Make sure you are running NodeJS 7.4+ (https://nodejs.org/) and have [CocoaPods](https://cocoapods.org) installed
+Make sure you are running [NodeJS](https://nodejs.org/) 7.4+ and have [CocoaPods](https://cocoapods.org) installed
 
 ```sh
 npm install

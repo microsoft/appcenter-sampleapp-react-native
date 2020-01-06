@@ -7,7 +7,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "build": "npm install && cd ./android && ./gradlew build && cd ../ios && pod install --repo-update && cd ..",
-    "clean": "rm -rf ./node_modules ./ios/{build,Pods,*.xcworkspace} ./android/{.gradle,.idea,*.iml}",
+    "clean": "rm -rf ./node_modules **/{.project,*.iml,build} ./ios/{Pods,*.xcworkspace} ./android/{.gradle,.idea}",
     "test": "jest",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.+(js|ts|tsx)\""
