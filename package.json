@@ -15,7 +15,7 @@
   "dependencies": {
     "@react-native-community/cli-platform-android": "^3.0.3",
     "@types/react": "^16.9.17",
-    "@types/react-native": "^0.60.30",
+    "@types/react-native": "^0.60.31",
     "@types/react-navigation": "^3.4.0",
     "appcenter": "2.6.1",
     "appcenter-analytics": "2.6.1",
