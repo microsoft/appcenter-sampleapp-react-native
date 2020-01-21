@@ -26,7 +26,7 @@
     "react-native-gesture-handler": "^1.5.3",
     "react-native-iphone-x-helper": "^1.2.1",
     "react-native-reanimated": "^1.7.0",
-    "react-native-screens": "^2.0.0-alpha.25",
+    "react-native-screens": "^2.0.0-alpha.27",
     "react-navigation": "^4.0.10",
     "react-navigation-drawer": "^2.3.3",
     "react-navigation-stack": "^1.10.3",
