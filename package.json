@@ -19,7 +19,7 @@
     "@types/react-navigation": "^3.4.0",
     "appcenter": "3.0.1",
     "appcenter-analytics": "2.6.1",
-    "appcenter-crashes": "2.6.1",
+    "appcenter-crashes": "3.0.3",
     "react": "^16.12.0",
     "react-native": "^0.61.5",
     "react-native-code-push": "^6.0.0",
