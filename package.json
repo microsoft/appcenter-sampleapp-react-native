@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@react-native-community/cli-platform-android": "^4.10.1",
-    "@types/react": "^16.9.25",
+    "@types/react": "^16.9.46",
     "@types/react-native": "^0.63.4",
     "@types/react-navigation": "^3.4.0",
     "appcenter": "3.0.1",
@@ -45,7 +45,7 @@
     "react-native-typescript-transformer": "^1.2.13",
     "react-test-renderer": "^16.13.0",
     "ts-jest": "^25.5.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.7"
   },
   "jest": {
     "preset": "react-native",
