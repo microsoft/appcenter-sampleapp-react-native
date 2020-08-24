@@ -21,7 +21,7 @@
     "appcenter-analytics": "2.6.1",
     "appcenter-crashes": "3.1.1",
     "react": "^16.13.1",
-    "react-native": "^0.61.5",
+    "react-native": "^0.63.2",
     "react-native-code-push": "^6.0.0",
     "react-native-gesture-handler": "^1.7.0",
     "react-native-iphone-x-helper": "^1.2.1",
