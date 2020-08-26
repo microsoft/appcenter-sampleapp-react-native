@@ -103,7 +103,7 @@ dependencies {
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01'
 
     // Unit Tests
-    testImplementation 'androidx.test.ext:junit:1.1.1'
+    testImplementation 'androidx.test.ext:junit:1.1.2'
 
     // UI Testing
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
