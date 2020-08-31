@@ -17,7 +17,7 @@
     "@types/react": "^16.9.46",
     "@types/react-native": "^0.63.11",
     "@types/react-navigation": "^3.4.0",
-    "appcenter": "3.0.1",
+    "appcenter": "3.1.1",
     "appcenter-analytics": "2.6.1",
     "appcenter-crashes": "3.1.1",
     "react": "^16.13.1",
