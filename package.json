@@ -36,7 +36,7 @@
     "@babel/core": "^7.11.4",
     "@babel/runtime": "^7.11.2",
     "@react-native-community/eslint-config": "^2.0.0",
-    "@types/jest": "^26.0.10",
+    "@types/jest": "^26.0.12",
     "@types/react-test-renderer": "^16.9.3",
     "babel-jest": "^26.3.0",
     "eslint": "^6.8.0",
