@@ -21,12 +21,3 @@ target 'AppCenterSample' do
     flipper_post_install(installer)
   end
 end
-
-target 'RNTodo-tvOS' do
-  # Pods for RNTodo-tvOS
-
-  target 'RNTodo-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-end
