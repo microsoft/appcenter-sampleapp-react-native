@@ -30,7 +30,7 @@
     "react-navigation": "^4.4.2",
     "react-navigation-drawer": "^2.5.2",
     "react-navigation-stack": "^1.10.3",
-    "react-navigation-tabs": "^2.9.2"
+    "react-navigation-tabs": "^2.10.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
