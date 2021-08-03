@@ -18,7 +18,8 @@ target 'AppCenterSample' do
   # you should disable these next few lines.
   #use_flipper!({ 'Flipper' => '0.74.0' })
   #add_flipper_pods!('Flipper-Folly' => '2.3.0')
-  use_flipper!('Flipper-Folly' => '2.5.2')
+  #use_flipper!()
+  use_flipper!({'Flipper' => '0.95.0', 'Flipper-Folly' => '2.6.7'})
   post_install do |installer|
   flipper_post_install(installer)
   end
