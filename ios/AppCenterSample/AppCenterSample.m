@@ -25,7 +25,7 @@ RCT_EXPORT_METHOD(showColoredEventsDialog)
                            style:UIAlertActionStyleDefault
                            handler:^(UIAlertAction * action)
                            {
-                             [MSAnalytics trackEvent:@"Color event" withProperties: @{@"Color": @"Yellow"}];
+                             [MSACAnalytics trackEvent:@"Color event" withProperties: @{@"Color": @"Yellow"}];
                            }];
   [alert addAction:(yellow)];
   
@@ -34,7 +34,7 @@ RCT_EXPORT_METHOD(showColoredEventsDialog)
                            style:UIAlertActionStyleDefault
                            handler:^(UIAlertAction * action)
                            {
-                             [MSAnalytics trackEvent:@"Color event" withProperties: @{@"Color": @"Blue"}];
+                             [MSACAnalytics trackEvent:@"Color event" withProperties: @{@"Color": @"Blue"}];
                            }];
   [alert addAction:(blue)];
   
@@ -43,7 +43,7 @@ RCT_EXPORT_METHOD(showColoredEventsDialog)
                            style:UIAlertActionStyleDefault
                            handler:^(UIAlertAction * action)
                            {
-                             [MSAnalytics trackEvent:@"Color event" withProperties: @{@"Color": @"Red"}];
+                             [MSACAnalytics trackEvent:@"Color event" withProperties: @{@"Color": @"Red"}];
                            }];
   [alert addAction:(red)];
 
