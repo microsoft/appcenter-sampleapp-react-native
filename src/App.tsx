@@ -10,7 +10,6 @@ import { TestScreen } from "./screens/testScreen";
 import { DistributeScreen } from "./screens/distributeScreen";
 import { CrashesScreen } from "./screens/crashesScreen";
 import { AnalyticsScreen } from "./screens/analyticsScreen";
-import { PushScreen } from "./screens/pushScreen";
 import { CodePushScreen } from "./screens/codePushScreen";
 import "react-native-gesture-handler";
 
@@ -20,7 +19,6 @@ const CodePushStack = createStackNavigator({ screen: CodePushScreen });
 const DistributeStack = createStackNavigator({ screen: DistributeScreen });
 const CrashesStack = createStackNavigator({ screen: CrashesScreen });
 const AnalyticsStack = createStackNavigator({ screen: AnalyticsScreen });
-const PushStack = createStackNavigator({ screen: PushScreen });
 const RootStack = createMaterialTopTabNavigator(
   {
     Welcome: WelcomeScreen,
@@ -30,7 +28,6 @@ const RootStack = createMaterialTopTabNavigator(
     Distribute: DistributeStack,
     Crashes: CrashesStack,
     Analytics: AnalyticsStack,
-    Push: PushStack
   },
   {
     initialRouteName: "Welcome",
