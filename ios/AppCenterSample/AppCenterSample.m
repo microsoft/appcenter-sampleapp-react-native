@@ -50,4 +50,9 @@ RCT_EXPORT_METHOD(showColoredEventsDialog)
   [presentingController presentViewController:alert animated:YES completion:nil];
 }
 
+- (dispatch_queue_t)methodQueue
+{
+  return dispatch_get_main_queue();
+}
+
 @end

@@ -1,9 +1,6 @@
-import * as React from "react";
-import { StyleSheet, View } from "react-native";
-import { createMaterialTopTabNavigator, createBottomTabNavigator } from "react-navigation-tabs";
-import { createAppContainer, createSwitchNavigator } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
-import { createDrawerNavigator } from "react-navigation-drawer";
+import * as React from 'react';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { NavigationContainer } from "@react-navigation/native";
 import { WelcomeScreen } from "./screens/welcomeScreen";
 import { BuildScreen } from "./screens/buildScreen";
 import { TestScreen } from "./screens/testScreen";
@@ -13,37 +10,25 @@ import { AnalyticsScreen } from "./screens/analyticsScreen";
 import { CodePushScreen } from "./screens/codePushScreen";
 import "react-native-gesture-handler";
 
-const BuildStack = createStackNavigator({ screen: BuildScreen });
-const TestStack = createStackNavigator({ screen: TestScreen });
-const CodePushStack = createStackNavigator({ screen: CodePushScreen });
-const DistributeStack = createStackNavigator({ screen: DistributeScreen });
-const CrashesStack = createStackNavigator({ screen: CrashesScreen });
-const AnalyticsStack = createStackNavigator({ screen: AnalyticsScreen });
-const RootStack = createMaterialTopTabNavigator(
-  {
-    Welcome: WelcomeScreen,
-    Build: BuildStack,
-    Test: TestStack,
-    CodePush: CodePushStack,
-    Distribute: DistributeStack,
-    Crashes: CrashesStack,
-    Analytics: AnalyticsStack,
-  },
-  {
-    initialRouteName: "Welcome",
-    tabBarOptions: {
-      showLabel: false,
-      style: {
-        backgroundColor: "#252525"
-      }
-    },
-    navigationOptions: {
-      tabBarVisible: false
-    },
-    lazy: false,
-    swipeEnabled: true
-  }
-);
-const AppContainer = createAppContainer(RootStack);
+const Tab = createMaterialTopTabNavigator();
 
-export default AppContainer;
+export default function AppContainer() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator
+        tabBar={() => null}
+        screenOptions={{
+          lazy: false,
+          swipeEnabled: true,
+        }}>
+        <Tab.Screen name="Home" component={WelcomeScreen} />
+        <Tab.Screen name="Settings" component={BuildScreen} />
+        <Tab.Screen name="Test" component={TestScreen} />
+        <Tab.Screen name="CodePush" component={CodePushScreen} />
+        <Tab.Screen name="Distribute" component={DistributeScreen} />
+        <Tab.Screen name="Crashes" component={CrashesScreen} />
+        <Tab.Screen name="Analytics" component={AnalyticsScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
