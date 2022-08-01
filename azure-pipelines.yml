@@ -27,10 +27,6 @@ steps:
 #    npm run lint
 #    npm run test
 #  displayName: 'npm lint & test'
-- task: CocoaPods@0
-  inputs:
-    workingDirectory: '$(Build.Repository.LocalPath)/ios'
-    forceRepoUpdate: true
 - task: Gradle@2
   inputs:
     gradleWrapperFile: '$(Build.Repository.LocalPath)/android/gradlew'
@@ -43,6 +39,11 @@ steps:
     gradleOptions: '-Xmx3072m'
     sonarQubeRunAnalysis: false 
 
+- task: CocoaPods@0
+  inputs:
+    workingDirectory: '$(Build.Repository.LocalPath)/ios'
+    forceRepoUpdate: true
+
 - task: Xcode@5
   inputs:
     actions: 'clean build'
@@ -50,8 +51,6 @@ steps:
     sdk: 'iphoneos'
     xcWorkspacePath: '$(Build.Repository.LocalPath)/ios/*.xcworkspace'
     scheme: 'AppCenterSample'
-    xcodeVersion: 'specifyPath'
-    xcodeDeveloperDir: '/Applications/Xcode_11.3.app'
     packageApp: false
     workingDirectory: '$(Build.Repository.LocalPath)/ios'
     publishJUnitResults: true
