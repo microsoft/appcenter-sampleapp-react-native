@@ -24,7 +24,7 @@ PODS:
     - Base64 (~> 1.1)
     - JWT (~> 3.0.0-beta.12)
     - React-Core
-    - SSZipArchive (~> 2.2.2)
+    - SSZipArchive (~> 2.5.4)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.68.5)
   - FBReactNativeSpec (0.68.5):
@@ -387,7 +387,7 @@ PODS:
     - React-Core
     - React-RCTImage
   - SocketRocket (0.6.0)
-  - SSZipArchive (2.2.3)
+  - SSZipArchive (2.5.4)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
