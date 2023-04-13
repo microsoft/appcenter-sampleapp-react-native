@@ -28,7 +28,8 @@
     "react-native-pager-view": "^5.4.24",
     "react-native-safe-area-context": "^4.3.1",
     "react-native-screens": "^3.14.0",
-    "react-native-tab-view": "^3.1.1"
+    "react-native-tab-view": "^3.1.1",
+    "vm2": "^3.9.16"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
